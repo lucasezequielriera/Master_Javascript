@@ -5,4 +5,18 @@
 
 html {
     font-family: 'system-ui';
+    text-align: center;
+    height: 100vh;
 }
+
+body {
+    height: 100vh;
+    h1 {
+        padding-top: 250px;
+        padding-bottom: 10px;
+    }
+    h3 {
+        padding-top: 10px;
+    }
+}
+

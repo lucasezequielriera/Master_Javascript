@@ -5,6 +5,19 @@
 
 html {
   font-family: "system-ui";
+  text-align: center;
+  height: 100vh;
+}
+
+body {
+  height: 100vh;
+}
+body h1 {
+  padding-top: 250px;
+  padding-bottom: 10px;
+}
+body h3 {
+  padding-top: 10px;
 }
 
 /*# sourceMappingURL=styles.css.map */
