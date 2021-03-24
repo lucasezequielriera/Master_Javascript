@@ -143,7 +143,32 @@ listadoFrutas("naranja", "manzana", "sandia", "pera", "melon");
 
 let frutas = ["naranja", "manzana"];
 listadoFrutas(...frutas, "manzana", "sandia", "pera", "melon");
-*/
+
 
 // Funciones Anónimas //
 
+let unaFuncion = function() {
+    console.log("Soy una funcion anónima");
+}
+
+// Método de Búsqueda en Strings //
+(Contar la cantidad de caractéres que tiene un String) => console.log(palabra.length);
+(Convertir todo a minúscula) => console.log(palabra.toLowerCase());
+(Convertir todo a mayúscula) => console.log(palabra.toUpperCase());
+(Buscar palabra dentro de String) => console.log(texto.indexOf("curso"));
+(Buscar palabra dentro de String) => console.log(texto.search("curso"));
+(Buscar palabra dentro de String como "Array") => console.log(texto.match("curso"));
+(Buscar dentro de String desde un punto hacia otro) => console.log(texto.substr(14,5));
+(Buscar palabra dentro de String y devuelve "true" o "false") => console.log(texto.startsWith("curso"));
+(Buscar palabra dentro de String y devuelve "true" o "false") => console.log(texto.includes("curso"));
+(Buscar la última aparición de String) => console.log(texto.lastIndexOf("curso"));
+(Reemplaza una palabra dentro de String por otra) => console.log(texto.replace("curso", "materia"));
+(Muestra el String desde un punto que quiera hasta otro) => console.log(texto.slice(14, 22));
+(Mete todo el String dentro de un Array (especial para buscadores)) => console.log(texto.split("" ""));
+(Quitar espacios por delante y por detrás) => console.log(texto.trim());
+
+// Plantilla de Texto //
+
+let texto = `<h1>Esto es una plantilla de texto</h1>
+             <h2>Muestro el título y subtitulo de una mejor manera</h2>`;
+*/
