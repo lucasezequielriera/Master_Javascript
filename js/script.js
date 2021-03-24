@@ -90,7 +90,7 @@ for(let i=0; i<numero; i++) {
 // Bucle While //
 let year = 2018;
 
-white(year != 1991) {
+while(year != 1991) {
     console.log(`Estamos en el año: ${year}`);
     year--;
 }
@@ -171,4 +171,158 @@ let unaFuncion = function() {
 
 let texto = `<h1>Esto es una plantilla de texto</h1>
              <h2>Muestro el título y subtitulo de una mejor manera</h2>`;
+
+// Arrays //
+
+let nombres = ["Lucas Riera", "Lucas Martin", "Lucas Thompson", "Lucas Roberts"];
+
+console.log(nombres); // Muestra todo el array "nombres"
+// ó //
+console.log(nombres[3]); // Muestra el elemento de la posición indicada en el array
+
+let lenguajes = new Array("JS", "PHP", "CSS", "Java", "Pascal", "C++");
+
+// (Pedir por consola que elemento se quiere ver) //
+
+let elemento = Number(prompt("Que elememento querrías ver?"), 0);
+if (elemento >= nombres.length) {
+    alert(`Introduce un número menor que ${nombres.length}`);
+} else {
+    alert(`El usuario seleccionado fue: ${nombres[elemento]}`);
+}
+
+// (Recorrer el Array y mostrarlo en pantalla mediante formato "lista") //
+
+document.write("<h1>Lenguajes de Programación dados en el 2017");
+document.write("<ul>");
+
+for(let i = 0; i < lenguajes.length; i++) {
+    document.write(`<li> ${lenguajes[i]} </li>`);
+}
+
+document.write("</ul>");
+
+// Recorrer Array con forEach (Callback) MEJOR OPCION//
+
+lenguajes.forEach((elemento) => {
+    document.write(`<li> elemento </li>`);
+});
+
+document.write("</li>");
+
+
+// Array Multidimensional (arrays dentro de otros arrays) //
+
+let categorias = ["Accion", "Terror", "Comedia"];
+let peliculas = ["La Cruda Verdad", "Titanic", "La vida es Bella"];
+
+let cine = [categorias, peliculas];
+
+console.log(cine); // Mostrar los dos arrays //
+
+console.log(cine[0][1]); // Primero entra en "categorías" con el elemento [0] y luego a "Terror" con el elemento [1];
+
+// Añadir elemento al array (elemento "Push") //
+
+peliculas.push("Batman");
+
+// Operaciones con Arrays (Agregar películas hasta escribir "Terminar") //
+
+let elemento = "";
+
+do {
+    elemento = prompt("Introduce tu película");
+    pelicula.push(elemento);
+} while (elemento != "Terminar");
+
+peliculas.pop(); // Elimina el último elemento agregado en el array //
+
+console.log(peliculas);
+
+// Eliminar un elemento en concreto del array // # Si no lo encuentra dá "-1"
+
+let indice = peliculas.indexOf("La Cruda Verdad");
+
+if(indice > -1) {
+    peliculas.splice(indice, 1);
+}
+
+console.log(peliculas);
+
+// Convertir Array a String // # Es necesario guardarlo dentro de una variable
+
+let peliculas_string = peliculas.join();
+
+console.log(peliculas_string);
+
+// Convertir un String en un Array //
+
+let cadena = "texto 1, texto 2, texto 3";
+let cadena_array = cadena.split(", "); // Identifica el separador entre esos elementos en el String
+
+console.log(cadena_array);
+
+// Ordenar Array en orden alfabético //
+
+peliculas.sort();
+
+// Dar vuelta al array (orden inverso) //
+
+peliculas.reverse();
+
+// Recorrer Array con "for in" //
+
+for(lenguaje in lenguajes) {
+    document.write(`<li>${lenguajes[lenguaje]}</li>`);
+}
+
+// Buscar en un Array (por String) //
+
+let busqueda = lenguajes.find(function(lenguaje){
+    return lenguaje == "PHP";
+});
+
+console.log(busqueda);
+
+// ó con Array Function
+
+let busqueda = lenguajes.find(lenguaje => lenguaje == "PHP");
+
+console.log(busqueda); // Me devuelve "PHP" en la consola por haberlo encontrado, sino devuelve "undefined"
+
+// Buscar en un Array (por índice) //
+
+let busqueda = lenguajes.findIndex(lenguaje => lenguaje == "JS");
+
+console.log(busqueda); // Me devuelve el índice ("0 ó 1 ó 2 ó el que sea que esté en la posición del elemento buscado")
+
+// Buscar números en Array que sea igual, menor o mayor //
+
+let precios = [10, 20, 30, 40, 50];
+
+let busqueda = precios.some(precio => precio <= 30);
+
+console.log(busqueda); // Me devuelve "true" or "false"
+
+
+////// Ejercicio ///////
+
+1_ Que pida 6 numeros por pantalla y los meta en un array
+2_ Mostrar el array entero (todos sus elementos) en el cuerpo de la pagina y en la consola
+3_ Ordenarlo y mostrarlo
+4_ Invertir su orden y mostrarlo
+5_ Mostrar cuantos elementos tiene el array
+6_ Busqueda de un valor introducido por el usuario, que nos diga si lo encuentra y su indice (se valora el uso de funciones)
+
 */
+
+// Ejercicio Resuelto //
+
+// 1_
+
+let numeros = new Array(6);
+
+for(let i=0; i <5; i++) {
+    numeros[i] = Number(prompt("Elija un numero:"));
+}
+console.table(numeros);
