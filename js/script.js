@@ -320,9 +320,27 @@ console.log(busqueda); // Me devuelve "true" or "false"
 
 // 1_
 
-let numeros = new Array(6);
 
-for(let i=0; i <5; i++) {
-    numeros[i] = Number(prompt("Elija un numero:"));
+// Ordenar números ingresados
+function mostrarArray(elementos, textoCustom = "") {
+    document.write(`<h1>Los numeros son: ${textoCustom}</h1>`);
+    elementos.forEach((elemento, index) => {
+        document.write(`<strong>${elemento}</strong> <br>`);
+    });
 }
-console.table(numeros);
+
+let numeros = [];
+
+for(let i = 0; i <= 5; i++) {
+    numeros.push(Number(prompt("Escriba 1 numero;", 0)));
+}
+numeros = numeros.sort();
+
+// Mostrar en el cuerpo de la pagina
+document.write(`<h1>Los numeros son:</h1>`);
+numeros.forEach((numero, index) => {
+    document.write(`<strong>${numero}</strong> <br>`);
+});
+
+// Mostrar en consola
+console.log(numeros);
