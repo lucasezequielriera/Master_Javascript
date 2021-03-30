@@ -314,8 +314,6 @@ console.log(busqueda); // Me devuelve "true" or "false"
 5_ Mostrar cuantos elementos tiene el array
 6_ Busqueda de un valor introducido por el usuario, que nos diga si lo encuentra y su indice (se valora el uso de funciones)
 
-*/
-
 // Ejercicio Resuelto //
 
 // 1_
@@ -344,3 +342,31 @@ numeros.forEach((numero, index) => {
 
 // Mostrar en consola
 console.log(numeros);
+
+// DOM (Document Object Model) //
+
+// Selecionar elemento (Básico) //
+let caja = document.getElementById("miCaja");
+caja.innerHTML = "Hola a todos!";
+caja.style.backgroundColor = "red";
+caja.style.width = "100%";
+caja.className = "text-left";
+
+console.log(caja);
+
+// Seleccionar elemento con JQuery //
+let caja = document.querySelector("#miCaja");
+let cajaChica = document.querySelector("".cajaChica");
+
+
+// Seleccionar elementos por su etiqueta //
+let todosLosDivs = document.getElementsByTagName("div");
+let contenidoTexto = todosLosDivs[4].textContent; // (Agarro el contenido del div con textContent)
+todosLosDivs[4].innerHTML = "Soy yo!"; 
+console.log(todosLosDivs);
+console.log(contenidoTexto);
+*/
+
+// Crear elementos //
+let hr = document.createElement("hr");
+
