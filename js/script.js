@@ -365,8 +365,45 @@ let contenidoTexto = todosLosDivs[4].textContent; // (Agarro el contenido del di
 todosLosDivs[4].innerHTML = "Soy yo!"; 
 console.log(todosLosDivs);
 console.log(contenidoTexto);
-*/
 
 // Crear elementos //
 let hr = document.createElement("hr");
+
+// BOM (Browser Object Model) //
+
+(Altura de página actual)
+console.log(window.innerHeight);
+
+(Anchura de pagina actual)
+console.log(window.innerWidth);
+
+(Sacar los dos juntos)
+getBom();
+(Altura de página total)
+
+console.log(screen.height);
+(Anchura de página total)
+
+console.log(screen.width);
+
+(Ver Datos de página actual)
+console.log(window.location);
+
+(Función redireccionar a página)
+function (url) {
+    window.location.href = url;
+}
+
+(Función Abrir pestaña nueva en navegador)
+function (url) {
+    window.open(url);
+}
+
+(Función hacer Popup)
+function (url) {
+    window.open(url, "", "width=400, height=400");
+}
+*/
+
+// Eventos //
 
