@@ -19,5 +19,13 @@ body h1 {
 body h3 {
   padding-top: 10px;
 }
+body #datos {
+  border: 2px solid black;
+  width: 95%;
+  margin-top: 30px !important;
+  margin: auto;
+  height: 400px;
+  overflow: scroll;
+}
 
 /*# sourceMappingURL=styles.css.map */
