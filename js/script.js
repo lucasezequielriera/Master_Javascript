@@ -405,4 +405,11 @@ function (url) {
 }
 */
 
-// Eventos //
+// POO y Typescript //
+
+// let bicicleta = {
+//     color: "rojo",
+//     modelo: "bmx",
+//     frenos: "de disco",
+//     velocidadMaxima: "60km/h"
+// };
